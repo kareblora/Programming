@@ -2,14 +2,26 @@ package main
 
 import "fmt"
 
-func modify(y int) int {
-	y += 15
-	return y
+//func modify(numbers ...int) {
+//	for i := range numbers {
+//		numbers[i] -= 5
+//	}
+//}
+//func main() {
+//	arr := []int{10, 20, 30}
+//	fmt.Println(arr)
+//	modify(arr...)
+//	fmt.Println(arr)
+//}
+
+func modify(numbers [3]int) {
+	for i := range numbers {
+		numbers[i] -= 5
+	}
 }
 func main() {
-
-	var x int
-	y := 20
-	x = modify(y)
-	fmt.Println(x)
+	arr := [3]int{10, 20, 30}
+	fmt.Println(arr)
+	modify(arr)
+	fmt.Println(arr)
 }
